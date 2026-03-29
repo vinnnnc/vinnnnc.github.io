@@ -1,6 +1,38 @@
-# React + TypeScript + Vite
+# Vincent Bautista — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website showcasing my projects, skills, and background as a Front-End Developer.
+
+**Live:** [vinnnnc.github.io](https://vinnnnc.github.io)
+
+## Tech Stack
+
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS v4
+- Radix UI (Dialog)
+- Framer Motion
+
+## Features
+
+- Dark / light theme with localStorage persistence
+- Project detail modals with animations
+- Responsive layout
+- Scroll-based navigation highlighting
+- Deployed via GitHub Actions to GitHub Pages
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
 
 Currently, two official plugins are available:
 
