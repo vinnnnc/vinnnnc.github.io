@@ -6,15 +6,16 @@ Personal portfolio website showcasing my projects, skills, and background as a F
 
 ## Tech Stack
 
-- React 19 + TypeScript
-- Vite
-- Tailwind CSS v4
-- Radix UI (Dialog)
-- Framer Motion
+![React](https://img.shields.io/badge/React_19-20232A?style=flat&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-EE4B96?style=flat&logo=framer&logoColor=white)
+![Radix UI](https://img.shields.io/badge/Radix_UI-1C2024?style=flat&logo=radixui&logoColor=white)
 
 ## Features
 
-- Dark / light theme with localStorage persistence
+- Dark / light theme with localStorage persistence and no flash
 - Project detail modals with animations
 - Responsive layout
 - Scroll-based navigation highlighting
@@ -32,19 +33,6 @@ npm run dev
 ```bash
 npm run build
 ```
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
 ```js
 export default defineConfig([

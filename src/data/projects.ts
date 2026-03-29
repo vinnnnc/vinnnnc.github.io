@@ -16,14 +16,13 @@ const projects: Project[] = [
         description:
             "This portfolio — built with React, Vite, and Tailwind CSS v4. Features dark/light theme switching with Context API and localStorage persistence.",
         tags: ["Personal", "React", "TypeScript", "Tailwind CSS", "Vite"],
-        githubUrl: "https://github.com/vinnnnc",
         year: "2026",
         longDescription:
-            "A minimalist personal portfolio designed to showcase my projects and skills. Built entirely from scratch without any UI component library, relying on Tailwind CSS v4 and CSS custom properties for theming.",
+            "A minimalist personal portfolio designed to showcase my projects and skills. Built entirely from scratch, relying on Tailwind CSS v4 and CSS custom properties for theming.",
         highlights: [
-            "Dark/light theme with localStorage persistence",
-            "Project detail modals with smooth animations",
-            "Fully responsive with no external UI component library",
+            "Dark/light theme with localStorage persistence and no flash on load",
+            "Project detail modals with smooth Framer Motion animations",
+            "Fully responsive layout with scroll-based navigation highlighting",
         ],
     },
     {
@@ -77,7 +76,6 @@ const projects: Project[] = [
         description:
             "React Native Android app paired with an ESP-01 smart plug for remote power monitoring and scheduling.",
         tags: ["Thesis", "React Native", "Android", "ESP-01", "IoT"],
-        githubUrl: "https://github.com/vinnnnc",
         year: "2024",
         longDescription:
             "Thesis project — a smart plug system built around the ESP-01 (ESP8266) Wi-Fi module, paired with a React Native Android app for remote control. Enables remote power toggling, real-time power consumption monitoring, and automated scheduling.",
@@ -93,7 +91,6 @@ const projects: Project[] = [
         description:
             "E-commerce platform showcasing and selling local Pangasinan products with a clean, accessible storefront.",
         tags: ["Commissioned", "E-commerce", "React", "Tailwind CSS"],
-        githubUrl: "https://github.com/vinnnnc",
         year: "2024",
         longDescription:
             "A commissioned e-commerce web application built to promote and sell locally sourced products from Pangasinan, Philippines. Designed with a clean and accessible storefront that highlights the cultural identity of the region.",
@@ -106,12 +103,11 @@ const projects: Project[] = [
     {
         title: "EggQI",
         description:
-            "Egg quality monitoring system using an ESP32 camera and candling technique, with an Android companion app for viewing results.",
+            "Egg quality inspection system using an ESP32 camera and candling technique, with an Android companion app for viewing results.",
         tags: ["Commissioned", "ESP32", "Arduino", "C++", "IoT"],
-        githubUrl: "https://github.com/vinnnnc",
         year: "2023",
         longDescription:
-            "A commissioned egg quality monitoring system that replicates the candling process — using a light source beneath the eggs and an ESP32 camera to capture and analyze the images. Results are classified by grade and displayed on an Android app built with MIT App Inventor.",
+            "A commissioned egg quality inspection system that replicates the candling process — using a light source beneath the eggs and an ESP32 camera to capture and analyze the images. Results are classified by grade and displayed on an Android app built with MIT App Inventor.",
         highlights: [
             "ESP32 camera module captures candled egg images for quality analysis",
             "Light-based candling setup for non-destructive freshness detection",

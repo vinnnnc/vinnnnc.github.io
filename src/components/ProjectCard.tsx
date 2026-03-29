@@ -8,7 +8,7 @@ interface ProjectCardProps extends Project {
 export default function ProjectCard({ title, description, tags, liveUrl, githubUrl, year, onClick }: ProjectCardProps) {
     return (
         <article
-            className="bg-card border border-line rounded-md p-6 flex flex-col gap-2.5 transition-colors hover:border-line-hover cursor-pointer"
+            className="bg-card border border-line rounded-md p-6 flex flex-col gap-2.5 transition-colors hover:border-line-hover cursor-pointer h-full"
             onClick={onClick}
             role={onClick ? "button" : undefined}
             tabIndex={onClick ? 0 : undefined}
@@ -23,6 +23,7 @@ export default function ProjectCard({ title, description, tags, liveUrl, githubU
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="View source on GitHub"
+                            onClick={(e) => e.stopPropagation()}
                             className="text-muted hover:text-heading transition-colors flex items-center p-2 -m-2"
                         >
                             <svg
@@ -42,6 +43,7 @@ export default function ProjectCard({ title, description, tags, liveUrl, githubU
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="View live project"
+                            onClick={(e) => e.stopPropagation()}
                             className="text-muted hover:text-heading transition-colors flex items-center p-2 -m-2"
                         >
                             <svg
