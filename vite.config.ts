@@ -3,12 +3,13 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { codeInspectorPlugin } from "code-inspector-plugin";
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
     plugins: [
-        codeInspectorPlugin({
-            bundler: "vite",
-        }),
+        command === "serve" &&
+            codeInspectorPlugin({
+                bundler: "vite",
+            }),
         tailwindcss(),
         react(),
     ],
-});
+}));
