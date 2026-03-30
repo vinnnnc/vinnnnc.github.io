@@ -1,3 +1,5 @@
+import radipulsePowerScreenshot from "../assets/radipulsepower_screenshot_1.webp";
+
 export interface Project {
     title: string;
     description: string;
@@ -39,6 +41,7 @@ const projects: Project[] = [
             "Built with React, TypeScript, Vite, and Tailwind CSS",
             "Responsive design optimized for all screen sizes",
         ],
+        screenshots: [radipulsePowerScreenshot],
     },
     {
         title: "KMonit",
@@ -61,7 +64,7 @@ const projects: Project[] = [
         description:
             "A 2.5D side-scrolling parkour game in early development. Built with Godot, using 3D models and animations from Mixamo.",
         tags: ["Personal", "WIP", "Godot", "GDScript", "Blender", "Game Dev"],
-        year: "2025",
+        year: "2024",
         longDescription:
             "A personal game development project — a 2.5D side-scrolling parkour game built in Godot 4. The game features fluid movement mechanics with wall-running, vaulting, and sliding. Character models and animations sourced from Mixamo and modified in Blender.",
         highlights: [
@@ -74,15 +77,15 @@ const projects: Project[] = [
     {
         title: "SmartPlug",
         description:
-            "React Native Android app paired with an ESP-01 smart plug for remote power monitoring and scheduling.",
+            "React Native Android app paired with an ESP-01 smart plug for remote power control and scheduling.",
         tags: ["Thesis", "React Native", "Android", "ESP-01", "IoT"],
         year: "2024",
         longDescription:
-            "Thesis project — a smart plug system built around the ESP-01 (ESP8266) Wi-Fi module, paired with a React Native Android app for remote control. Enables remote power toggling, real-time power consumption monitoring, and automated scheduling.",
+            "Thesis project — a smart plug system built around the ESP-01 (ESP8266) Wi-Fi module, paired with a React Native Android app for remote control. Enables remote power toggling and automated scheduling via a mobile interface.",
         highlights: [
             "ESP-01 (ESP8266) firmware for Wi-Fi communication and relay control",
-            "React Native Android app with real-time power monitoring UI",
-            "Automated scheduling with time-based and consumption-based triggers",
+            "React Native Android app for remote power toggling",
+            "Automated scheduling with time-based triggers",
             "Presented and defended as undergraduate thesis project",
         ],
     },
@@ -105,7 +108,7 @@ const projects: Project[] = [
         description:
             "Egg quality inspection system using an ESP32 camera and candling technique, with an Android companion app for viewing results.",
         tags: ["Commissioned", "ESP32", "Arduino", "C++", "IoT"],
-        year: "2023",
+        year: "2024",
         longDescription:
             "A commissioned egg quality inspection system that replicates the candling process — using a light source beneath the eggs and an ESP32 camera to capture and analyze the images. Results are classified by grade and displayed on an Android app built with MIT App Inventor.",
         highlights: [
@@ -115,5 +118,7 @@ const projects: Project[] = [
         ],
     },
 ];
+
+projects.sort((a, b) => Number(b.year) - Number(a.year));
 
 export default projects;

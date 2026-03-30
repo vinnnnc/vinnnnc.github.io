@@ -31,7 +31,8 @@ const fadeUp: Variants = {
 };
 
 const stagger: Variants = {
-    visible: { transition: { staggerChildren: 0.07 } },
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.1 } },
 };
 
 export default function Home() {
@@ -41,7 +42,7 @@ export default function Home() {
         <main>
             {/* Hero */}
             <section className="py-28 border-b border-line">
-                <div className="max-w-[960px] mx-auto px-8">
+                <div className="max-w-240 mx-auto px-8">
                     <motion.div
                         className="flex items-start justify-between gap-10"
                         initial="hidden"
@@ -49,14 +50,14 @@ export default function Home() {
                         variants={stagger}
                     >
                         <motion.div variants={fadeUp}>
-                            <p className="text-sm text-muted mb-2.5">Hi, I'm</p>
-                            <h1 className="text-[clamp(2.75rem,7vw,5rem)] font-semibold tracking-tight leading-[1.05] mb-2 text-heading">
+                            <p className="font-mono text-sm text-muted mb-2.5">Hi, I'm</p>
+                            <h1 className="font-mono text-[clamp(2.75rem,7vw,5rem)] font-semibold tracking-tight leading-[1.05] mb-2 text-heading">
                                 Vincent Bautista
                             </h1>
                             <p className="text-[clamp(1rem,2.5vw,1.25rem)] text-muted font-normal mb-6">
                                 Front-End Developer
                             </p>
-                            <p className="max-w-[460px] text-[0.9375rem] text-muted leading-[1.75] mb-8">
+                            <p className="max-w-115 text-[0.9375rem] text-muted leading-[1.75] mb-8">
                                 I build web interfaces and embedded systems — from IoT dashboards to Arduino-based
                                 hardware projects. I enjoy turning complex problems into clean, functional experiences.
                             </p>
@@ -84,7 +85,8 @@ export default function Home() {
                                     Email
                                 </a>
                                 <a
-                                    href="/resume.pdf"
+                                    id="hero-resume-link"
+                                    href="/Vincent-Bautista-Resume.pdf"
                                     download
                                     className="flex items-center gap-1 text-sm text-muted pb-0.5 border-b border-transparent hover:text-heading hover:border-heading transition-[color,border-color]"
                                 >
@@ -108,7 +110,7 @@ export default function Home() {
                                 </a>
                             </div>
                         </motion.div>
-                        <motion.div variants={fadeUp} className="shrink-0 hidden sm:block pt-5">
+                        {/* <motion.div variants={fadeUp} className="shrink-0 hidden sm:block pt-5">
                             <div className="w-28 h-28 rounded-[28%] border border-line bg-card overflow-hidden flex items-center justify-center">
                                 <span className="text-2xl font-semibold text-muted select-none">VB</span>
                                 <img
@@ -120,43 +122,46 @@ export default function Home() {
                                     }}
                                 />
                             </div>
-                        </motion.div>
+                        </motion.div> */}
                     </motion.div>
                 </div>
             </section>
 
             {/* Work */}
             <section id="projects" className="py-20 border-b border-line">
-                <div className="max-w-[960px] mx-auto px-8">
-                    <h2 className="text-[0.6875rem] font-medium tracking-[0.12em] uppercase text-muted mb-10">
+                <div className="max-w-240 mx-auto px-8">
+                    <h2 className="font-mono text-[0.6875rem] font-medium tracking-[0.12em] uppercase text-muted mb-10">
                         Projects
                     </h2>
-                    <motion.div
-                        className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-3.5"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.1 }}
-                        variants={stagger}
-                    >
+                    <div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-3.5">
                         {projects.map((project) => (
-                            <motion.div key={project.title} variants={fadeUp}>
+                            <motion.div
+                                key={project.title}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.2 }}
+                                variants={fadeUp}
+                                className="h-full"
+                            >
                                 <ProjectCard {...project} onClick={() => setSelectedProject(project)} />
                             </motion.div>
                         ))}
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
             {/* About */}
             <section id="about" className="py-20 border-b border-line">
                 <motion.div
-                    className="max-w-[620px] mx-auto px-8"
+                    className="max-w-155 mx-auto px-8"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                     variants={fadeUp}
                 >
-                    <h2 className="text-[0.6875rem] font-medium tracking-[0.12em] uppercase text-muted mb-10">About</h2>
+                    <h2 className="font-mono text-[0.6875rem] font-medium tracking-[0.12em] uppercase text-muted mb-10">
+                        About
+                    </h2>
                     <div className="flex flex-col gap-4 mb-10">
                         <p className="text-[0.9375rem] text-muted leading-[1.75]">
                             I'm a front-end developer currently working at Katz Water Technologies, where I build web
@@ -183,13 +188,13 @@ export default function Home() {
             {/* Contact */}
             <section id="contact" className="py-20 border-b border-line">
                 <motion.div
-                    className="max-w-[620px] mx-auto px-8"
+                    className="max-w-155 mx-auto px-8"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
                     variants={fadeUp}
                 >
-                    <h2 className="text-[0.6875rem] font-medium tracking-[0.12em] uppercase text-muted mb-10">
+                    <h2 className="font-mono text-[0.6875rem] font-medium tracking-[0.12em] uppercase text-muted mb-10">
                         Contact
                     </h2>
                     <p className="text-[0.9375rem] text-muted leading-[1.75] mb-8">
@@ -197,7 +202,7 @@ export default function Home() {
                     </p>
                     <a
                         href="mailto:vincentbautista.008@gmail.com"
-                        className="inline-block text-sm font-medium bg-[var(--text)] text-[var(--bg)] px-6 py-2.5 rounded-md hover:opacity-85 transition-opacity"
+                        className="inline-block text-sm font-medium bg-heading text-page px-6 py-2.5 rounded-md hover:opacity-85 transition-opacity"
                     >
                         Say Hello
                     </a>
@@ -205,10 +210,10 @@ export default function Home() {
             </section>
 
             <footer className="py-10">
-                <div className="max-w-[960px] mx-auto px-8">
+                <div className="max-w-240 mx-auto px-8">
                     <p className="text-[0.8125rem] text-muted text-center">
                         Designed &amp; built by <span className="text-heading">Vincent Bautista</span> &copy;{" "}
-                        {new Date().getFullYear()}
+                        <span className="font-mono">{new Date().getFullYear()}</span>
                     </p>
                 </div>
             </footer>
