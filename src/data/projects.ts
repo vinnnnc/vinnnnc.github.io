@@ -92,14 +92,14 @@ const projects: Project[] = [
     {
         title: "Pangasinan Treasure",
         description:
-            "E-commerce platform showcasing and selling local Pangasinan products with a clean, accessible storefront.",
-        tags: ["Commissioned", "E-commerce", "React", "Tailwind CSS"],
+            "E-commerce platform showcasing and selling local Pangasinan products with a clean, accessible storefront. Built with vanilla JavaScript, HTML, and CSS.",
+        tags: ["Commissioned", "E-commerce", "JavaScript", "HTML", "CSS"],
         year: "2024",
         longDescription:
-            "A commissioned e-commerce web application built to promote and sell locally sourced products from Pangasinan, Philippines. Designed with a clean and accessible storefront that highlights the cultural identity of the region.",
+            "A commissioned e-commerce web application built to promote and sell locally sourced products from Pangasinan, Philippines. Implemented using plain (vanilla) JavaScript, semantic HTML, and modern CSS without front-end frameworks, focusing on accessibility and performance.",
         highlights: [
             "Product catalog with filtering and search",
-            "Built with React and Tailwind CSS for a fast, responsive experience",
+            "Built with vanilla JavaScript, HTML, and CSS for a fast, accessible experience",
             "Cart and checkout flow with order management",
         ],
     },

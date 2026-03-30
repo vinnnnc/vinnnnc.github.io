@@ -8,7 +8,13 @@ export default function ResumeFloat() {
         // Show FAB exactly when the hero resume link scrolls out of view
         const heroLink = document.getElementById("hero-resume-link");
         if (!heroLink) return;
-        const observer = new IntersectionObserver(([entry]) => setVisible(!entry.isIntersecting), { threshold: 0 });
+        // If header covers the hero link (sticky header), treat it as out-of-view
+        const header = document.querySelector("header");
+        const headerHeight = header ? header.getBoundingClientRect().height : 64; // fallback to 64px
+        const observer = new IntersectionObserver(([entry]) => setVisible(!entry.isIntersecting), {
+            threshold: 0,
+            rootMargin: `-${headerHeight}px 0px 0px 0px`,
+        });
         observer.observe(heroLink);
         return () => observer.disconnect();
     }, []);
@@ -24,7 +30,7 @@ export default function ResumeFloat() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 80, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 320, damping: 22 }}
-                    className="group fixed bottom-6 right-6 z-50 flex items-center bg-heading text-page rounded-full py-3 px-3 shadow-lg cursor-pointer"
+                    className="group fixed bottom-6 fab z-50 flex items-center bg-heading text-page rounded-full py-3 px-3 shadow-lg cursor-pointer"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

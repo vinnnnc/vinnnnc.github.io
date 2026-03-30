@@ -5,6 +5,18 @@
     --nav-height: 64px;
 }
 
+@layer base {
+    .fab {
+        right: 1.5rem;
+    }
+
+    @media (min-width: 60rem) {
+        .fab {
+            right: calc((100vw - 60rem) / 2 + 2rem);
+        }
+    }
+}
+
 [data-theme="dark"] {
     --bg: #0a0a0a;
     --bg-secondary: #111111;
