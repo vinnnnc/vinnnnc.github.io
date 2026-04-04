@@ -49,7 +49,7 @@ const projects: Project[] = [
             "IoT water tank monitoring platform with ESP32 hardware, edge processing, MQTT alerts, and web & mobile dashboards. A division of Katz Water Technologies.",
         tags: ["ESP32", "IoT", "React", "Mobile", "Vite"],
         liveUrl: "https://kmonit.org/",
-        year: "2026",
+        year: "2025",
         longDescription:
             "KMonit is an industrial IoT water tank monitoring platform developed for Katz Water Technologies. It combines ESP32-based hardware with cloud infrastructure to provide real-time tank level monitoring, predictive alerts, and multi-site management.",
         highlights: [
@@ -59,21 +59,21 @@ const projects: Project[] = [
             "Web and mobile dashboards for multi-tank, multi-site management",
         ],
     },
-    {
-        title: "Parkour Game",
-        description:
-            "A 2.5D side-scrolling parkour game in early development. Built with Godot, using 3D models and animations from Mixamo.",
-        tags: ["Personal", "WIP", "Godot", "GDScript", "Blender", "Game Dev"],
-        year: "2024",
-        longDescription:
-            "A personal game development project — a 2.5D side-scrolling parkour game built in Godot 4. The game features fluid movement mechanics with wall-running, vaulting, and sliding. Character models and animations sourced from Mixamo and modified in Blender.",
-        highlights: [
-            "Godot 4 with GDScript for game logic and physics-based movement",
-            "Character models and animations from Mixamo, modified in Blender",
-            "2.5D perspective combining 3D visuals with 2D gameplay",
-            "Work in progress — movement system and first level in development",
-        ],
-    },
+    // {
+    //     title: "Parkour Game",
+    //     description:
+    //         "A 2.5D side-scrolling parkour game in early development. Built with Godot, using 3D models and animations from Mixamo.",
+    //     tags: ["Personal", "WIP", "Godot", "GDScript", "Blender", "Game Dev"],
+    //     year: "2024",
+    //     longDescription:
+    //         "A personal game development project — a 2.5D side-scrolling parkour game built in Godot 4. The game features fluid movement mechanics with wall-running, vaulting, and sliding. Character models and animations sourced from Mixamo and modified in Blender.",
+    //     highlights: [
+    //         "Godot 4 with GDScript for game logic and physics-based movement",
+    //         "Character models and animations from Mixamo, modified in Blender",
+    //         "2.5D perspective combining 3D visuals with 2D gameplay",
+    //         "Work in progress — movement system and first level in development",
+    //     ],
+    // },
     {
         title: "SmartPlug",
         description:
