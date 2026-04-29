@@ -69,13 +69,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                                 {/* Screenshots */}
                                 {project.screenshots && project.screenshots.length > 0 && (
-                                    <div className="flex gap-3 overflow-x-auto pb-2 mb-6">
+                                    <div className="flex gap-3 overflow-x-auto pb-2 mb-6 custom-scrollbar">
                                         {project.screenshots.map((src, i) => (
                                             <img
                                                 key={i}
                                                 src={src}
                                                 alt={`${project.title} screenshot ${i + 1}`}
                                                 className="h-40 rounded-md border border-line object-cover shrink-0"
+                                                loading="lazy"
                                             />
                                         ))}
                                     </div>

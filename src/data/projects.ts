@@ -1,4 +1,7 @@
 import radipulsePowerScreenshot from "../assets/radipulsepower_screenshot_1.webp";
+import torqueUpScreenshot1 from "../assets/torqueup_screenshot_1.webp";
+import torqueUpScreenshot2 from "../assets/torqueup_screenshot_2.webp";
+import torqueUpScreenshot3 from "../assets/torqueup_screenshot_3.gif";
 
 export interface Project {
     title: string;
@@ -46,16 +49,15 @@ const projects: Project[] = [
     {
         title: "KMonit",
         description:
-            "IoT water tank monitoring platform with ESP32 hardware, edge processing, MQTT alerts, and web & mobile dashboards. A division of Katz Water Technologies.",
-        tags: ["ESP32", "IoT", "React", "Mobile", "Vite"],
-        liveUrl: "https://kmonit.org/",
+            "IoT water tank monitoring platform with microcontroller-based hardware and web & mobile dashboards. A division of Katz Water Technologies.",
+        tags: ["IoT", "React", "Mobile", "Vite"],
+        // liveUrl: "https://kmonit.org/",
         year: "2025",
         longDescription:
-            "KMonit is an industrial IoT water tank monitoring platform developed for Katz Water Technologies. It combines ESP32-based hardware with cloud infrastructure to provide real-time tank level monitoring, predictive alerts, and multi-site management.",
+            "KMonit is an industrial IoT water tank monitoring platform developed for Katz Water Technologies. It combines microcontroller-based hardware with cloud infrastructure to provide real-time tank level monitoring, predictive alerts, and multi-site management.",
         highlights: [
-            "ESP32 hardware with edge processing for low-latency local decisions",
+            "Microcontroller-based hardware with real-time water level sensing and alerts",
             "Supports LoRaWAN, NB-IoT, and LTE connectivity for remote deployments",
-            "MQTT-based alert system for threshold breaches and anomaly detection",
             "Web and mobile dashboards for multi-tank, multi-site management",
         ],
     },
@@ -116,6 +118,25 @@ const projects: Project[] = [
             "Light-based candling setup for non-destructive freshness detection",
             "Android companion app built with MIT App Inventor",
         ],
+    },
+    {
+        title: "Torque UP!",
+        description:
+            "A Godot-based mechanical network optimization game about routing torque from distributed power nodes into a generator. Entry for Gamedev.js Jam 2026, playable via web export.",
+        tags: ["Game", "Godot", "GDScript", "Jam", "Web"],
+        liveUrl: "https://vinnnnc.itch.io/torque-up",
+        githubUrl: "https://github.com/vinnnnc/torque-up",
+        year: "2026",
+        longDescription:
+            "Torque UP! is an experimental mechanical construction and optimization game built in Godot 4.6. Players assemble drivetrain parts and connect power nodes to deliver torque into a central generator while managing efficiency and conflicts. The project includes editor tooling for placement, save/load, and a web export for browser play.",
+        highlights: [
+            "Entry for Gamedev.js Jam 2026 (theme: Machines)",
+            "Built with Godot 4.6 using GDScript",
+            "Playable via web export (Itch.io and Wavedash)",
+            "Features: gears, power nodes, sink-based generator scoring, and local subnetwork simulation",
+            "Includes in-editor tools for placement, save/load, and debugging",
+        ],
+        screenshots: [torqueUpScreenshot3, torqueUpScreenshot1, torqueUpScreenshot2],
     },
 ];
 

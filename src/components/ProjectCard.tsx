@@ -73,6 +73,7 @@ export default function ProjectCard({
                             src={screenshots[0]}
                             alt={`${title} screenshot`}
                             className="w-full h-full object-cover object-top"
+                            loading="lazy"
                         />
                     ) : (
                         <div className="w-full h-full flex flex-col items-center justify-center gap-2">
