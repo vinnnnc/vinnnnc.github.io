@@ -9,20 +9,34 @@ const skills = [
     "React",
     "React Native",
     "Next.js",
+    "Vite",
     "TypeScript",
     "JavaScript",
     "Java",
+    "Python",
+    "C++",
     "HTML",
     "CSS",
     "Tailwind CSS",
-    "Vite",
     "Node.js",
     "Express.js",
     "MongoDB",
     "Git",
     "Arduino",
     "ESP",
+    "Raspberry Pi",
+];
+
+const tools = [
+    "Arduino IDE",
+    "Android Studio",
+    "GitHub",
+    "Postman",
     "Figma",
+    "Blender",
+    "Godot",
+    "Photoshop",
+    "Audacity",
 ];
 
 const fadeUp: Variants = {
@@ -180,6 +194,12 @@ export default function Home() {
                     <ul className="flex flex-wrap gap-2 p-0 list-none">
                         {skills.map((skill) => (
                             <Badge key={skill} label={skill} variant="chip" />
+                        ))}
+                    </ul>
+                    <p className="text-[0.8125rem] text-muted mb-3.5 mt-6">Other tools I use</p>
+                    <ul className="flex flex-wrap gap-2 p-0 list-none">
+                        {tools.map((tool) => (
+                            <Badge key={tool} label={tool} variant="chip" />
                         ))}
                     </ul>
                 </motion.div>
