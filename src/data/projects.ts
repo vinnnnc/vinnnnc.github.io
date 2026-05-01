@@ -1,7 +1,7 @@
 import radipulsePowerScreenshot from "../assets/radipulsepower_screenshot_1.webp";
-import torqueUpScreenshot1 from "../assets/torqueup_screenshot_1.webp";
-import torqueUpScreenshot2 from "../assets/torqueup_screenshot_2.webp";
-import torqueUpScreenshot3 from "../assets/torqueup_screenshot_3.gif";
+// import torqueUpScreenshot1 from "../assets/torqueup_screenshot_1.webp";
+// import torqueUpScreenshot2 from "../assets/torqueup_screenshot_2.webp";
+// import torqueUpScreenshot3 from "../assets/torqueup_screenshot_3.gif";
 
 export interface Project {
     title: string;
