@@ -119,23 +119,23 @@ const projects: Project[] = [
             "Android companion app built with MIT App Inventor",
         ],
     },
-    {
-        title: "Torque UP!",
-        description:
-            "A Godot-based mechanical network optimization game about routing torque from distributed power nodes into a generator. Entry for Gamedev.js Jam 2026, playable via web export.",
-        tags: ["Game", "Godot", "GDScript", "Jam", "Web"],
-        liveUrl: "https://vinnnnc.itch.io/torque-up",
-        githubUrl: "https://github.com/vinnnnc/torque-up",
-        year: "2026",
-        longDescription:
-            "Torque UP! is an experimental mechanical construction and optimization game built in Godot 4.6. Players assemble drivetrain parts and connect power nodes to deliver torque into a central generator while managing efficiency and conflicts. The project includes editor tooling for placement, save/load, and a web export for browser play.",
-        highlights: [
-            "Entry for Gamedev.js Jam 2026 (theme: Machines)",
-            "Built with Godot 4.6 using GDScript",
-            "Playable via web export (Itch.io and Wavedash)",
-            "Features: gears, power nodes, sink-based generator scoring, and local subnetwork simulation",
-            "Includes in-editor tools for placement, save/load, and debugging",
-        ],
+    // {
+    //     title: "Torque UP!",
+    //     description:
+    //         "A Godot-based mechanical network optimization game about routing torque from distributed power nodes into a generator. Entry for Gamedev.js Jam 2026, playable via web export.",
+    //     tags: ["Game", "Godot", "GDScript", "Jam", "Web"],
+    //     liveUrl: "https://vinnnnc.itch.io/torque-up",
+    //     githubUrl: "https://github.com/vinnnnc/torque-up",
+    //     year: "2026",
+    //     longDescription:
+    //         "Torque UP! is an experimental mechanical construction and optimization game built in Godot 4.6. Players assemble drivetrain parts and connect power nodes to deliver torque into a central generator while managing efficiency and conflicts. The project includes editor tooling for placement, save/load, and a web export for browser play.",
+    //     highlights: [
+    //         "Entry for Gamedev.js Jam 2026 (theme: Machines)",
+    //         "Built with Godot 4.6 using GDScript",
+    //         "Playable via web export (Itch.io and Wavedash)",
+    //         "Features: gears, power nodes, sink-based generator scoring, and local subnetwork simulation",
+    //         "Includes in-editor tools for placement, save/load, and debugging",
+    //     ],
         screenshots: [torqueUpScreenshot3, torqueUpScreenshot1, torqueUpScreenshot2],
     },
 ];
