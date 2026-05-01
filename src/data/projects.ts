@@ -136,8 +136,8 @@ const projects: Project[] = [
     //         "Features: gears, power nodes, sink-based generator scoring, and local subnetwork simulation",
     //         "Includes in-editor tools for placement, save/load, and debugging",
     //     ],
-        screenshots: [torqueUpScreenshot3, torqueUpScreenshot1, torqueUpScreenshot2],
-    },
+    //    screenshots: [torqueUpScreenshot3, torqueUpScreenshot1, torqueUpScreenshot2],
+    // },
 ];
 
 projects.sort((a, b) => Number(b.year) - Number(a.year));
