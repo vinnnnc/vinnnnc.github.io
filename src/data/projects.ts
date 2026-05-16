@@ -134,7 +134,7 @@ const projects: Project[] = [
             "Built with Godot 4.6 using GDScript",
             "Playable via web export (Itch.io and Wavedash)",
             "Features: gears, power nodes, sink-based generator scoring, and local subnetwork simulation",
-            "Includes in-editor tools for placement, save/load, and debugging",
+            // "Includes in-editor tools for placement, save/load, and debugging",
         ],
         screenshots: [torqueUpScreenshot3, torqueUpScreenshot1, torqueUpScreenshot2],
     },

@@ -69,11 +69,12 @@ export default function Home() {
                                 Vincent Bautista
                             </h1>
                             <p className="text-[clamp(1rem,2.5vw,1.25rem)] text-muted font-normal mb-6">
-                                Front-End Developer
+                                Front-End & Embedded Systems Developer
                             </p>
                             <p className="max-w-115 text-[0.9375rem] text-muted leading-[1.75] mb-8">
-                                I build web interfaces and embedded systems — from IoT dashboards to Arduino-based
-                                hardware projects. I enjoy turning complex problems into clean, functional experiences.
+                                I build web interfaces and embedded systems — from IoT dashboards to
+                                microcontroller-based hardware projects. I enjoy turning complex problems into clean,
+                                functional experiences.
                             </p>
                             <div className="flex gap-7">
                                 <a
@@ -178,16 +179,16 @@ export default function Home() {
                     </h2>
                     <div className="flex flex-col gap-4 mb-10">
                         <p className="text-[0.9375rem] text-muted leading-[1.75]">
-                            I'm a front-end developer currently working at Katz Water Technologies, where I build web
-                            interfaces for IoT products and internal tools. I have a passion for both software and
-                            hardware — Arduino and ESP microcontrollers, and anything that bridges the physical and
-                            digital world.
+                            I'm a front-end and embedded systems developer with hands-on experience building web
+                            interfaces for IoT products and industrial monitoring systems. I have a passion for both
+                            software and hardware — Raspberry Pi and microcontrollers, and anything that bridges the
+                            physical and digital world. Currently open to opportunities.
                         </p>
                         <p className="text-[0.9375rem] text-muted leading-[1.75]">
                             Outside of work, I explore game development, 3D modeling, and tinkering with
                             microcontrollers and embedded systems. I also enjoy electronics — repairing appliances,
                             building custom LED setups, basic phone and laptop hardware repairs, and PC building. I'm
-                            always learning something at the intersection of code and the real world.
+                            always learning something at the intersection of code and the real world .
                         </p>
                     </div>
                     <p className="text-[0.8125rem] text-muted mb-3.5">Technologies I work with</p>
