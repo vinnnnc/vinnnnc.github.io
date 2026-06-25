@@ -188,7 +188,7 @@ export default function Home() {
                             Outside of work, I explore game development, 3D modeling, and tinkering with
                             microcontrollers and embedded systems. I also enjoy electronics — repairing appliances,
                             building custom LED setups, basic phone and laptop hardware repairs, and PC building. I'm
-                            always learning something at the intersection of code and the real world .
+                            always learning something at the intersection of code and the real world.
                         </p>
                     </div>
                     <p className="text-[0.8125rem] text-muted mb-3.5">Technologies I work with</p>
