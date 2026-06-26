@@ -23,9 +23,10 @@ const projects: Project[] = [
         tags: ["Personal", "React", "TypeScript", "Tailwind CSS", "Vite"],
         year: "2026",
         longDescription:
-            "A minimalist personal portfolio designed to showcase my projects and skills. Built entirely from scratch, relying on Tailwind CSS v4 and CSS custom properties for theming.",
+            "A minimalist personal portfolio designed to showcase my projects and skills. Built entirely from scratch, relying on Tailwind CSS v4 and CSS custom properties for theming. Icon artwork and animated UI icons are sourced from itshover.",
         highlights: [
-            "Dark/light theme with localStorage persistence and no flash on load",
+            "Dark/light theme with localStorage persistence",
+            "Animated icon assets sourced from itshover",
             "Project detail modals with smooth Framer Motion animations",
             "Fully responsive layout with scroll-based navigation highlighting",
         ],

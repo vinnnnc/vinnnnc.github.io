@@ -30,7 +30,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                             <motion.div
                                 className="fixed z-50 inset-x-4 top-[50%] translate-y-[-50%] mx-auto
                                            max-w-160 max-h-[85vh] overflow-y-auto
-                                           bg-card border border-line rounded-lg p-8 outline-none"
+                                           bg-card border border-line rounded-lg p-8 outline-none custom-scrollbar"
                                 initial={{ opacity: 0, y: 24, scale: 0.97 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 exit={{ opacity: 0, y: 16, scale: 0.97 }}
@@ -47,7 +47,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                                         </span>
                                     </div>
                                     <Dialog.Close
-                                        className="text-muted hover:text-heading transition-colors shrink-0 mt-0.5"
+                                        className="text-muted hover:text-heading transition-colors shrink-0 mt-0.5 group"
                                         aria-label="Close"
                                     >
                                         <svg
@@ -60,6 +60,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
+                                            className="transition-transform duration-200 group-hover:rotate-90"
                                         >
                                             <line x1="18" y1="6" x2="6" y2="18" />
                                             <line x1="6" y1="6" x2="18" y2="18" />

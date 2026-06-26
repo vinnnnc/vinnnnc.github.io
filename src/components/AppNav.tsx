@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useTheme } from "../context/ThemeContext";
+import MoonIcon from "./ui/moon-icon";
+import BrightnessDownIcon from "./ui/brightness-down-icon";
 
 const NAV_SECTIONS = ["projects", "about", "contact"] as const;
 type Section = (typeof NAV_SECTIONS)[number];
@@ -35,48 +37,15 @@ function scrollTo(id: string) {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 }
 
-function SunIcon() {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-        >
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-        </svg>
-    );
-}
-
-function MoonIcon() {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-        >
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-        </svg>
-    );
-}
-
 export default function AppNav() {
     const { theme, toggleTheme } = useTheme();
     const activeSection = useActiveSection();
+    const themeIconRef = useRef<any>(null);
+
+    const handleThemeToggle = () => {
+        themeIconRef.current?.startAnimation?.();
+        toggleTheme();
+    };
 
     return (
         <header className="sticky top-0 z-50 bg-page border-b border-line h-16 flex items-center transition-[background-color,border-color] duration-200">
@@ -110,11 +79,17 @@ export default function AppNav() {
                         ))}
                     </nav>
                     <button
-                        className="flex items-center justify-center w-8 h-8 rounded-md border border-line bg-transparent text-muted hover:text-heading hover:border-muted transition-colors cursor-pointer shrink-0"
-                        onClick={toggleTheme}
+                        className="flex items-center justify-center w-8 h-8 rounded-md border border-line bg-transparent text-muted hover:text-heading hover:border-muted transition-colors cursor-pointer shrink-0 group"
+                        onClick={handleThemeToggle}
+                        onMouseEnter={() => themeIconRef.current?.startAnimation?.()}
+                        onMouseLeave={() => themeIconRef.current?.stopAnimation?.()}
                         aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
                     >
-                        {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+                        {theme === "dark" ? (
+                            <BrightnessDownIcon ref={themeIconRef} size={16} className="text-current" />
+                        ) : (
+                            <MoonIcon ref={themeIconRef} size={16} className="text-current" />
+                        )}
                     </button>
                 </div>
             </div>

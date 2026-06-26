@@ -1,8 +1,13 @@
-import { useState, lazy, Suspense } from "react";
+import { useState, lazy, Suspense, useRef } from "react";
 import { motion, type Variants } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
 const ProjectModal = lazy(() => import("../components/ProjectModal"));
 import Badge from "../components/Badge";
+import FileDescriptionIcon from "../components/ui/file-description-icon";
+import GithubIcon from "../components/ui/github-icon";
+import MailFilledIcon from "../components/ui/mail-filled-icon";
+import LinkedinIcon from "../components/ui/linkedin-icon";
+import SendIcon from "../components/ui/send-icon";
 import projects, { type Project } from "../data/projects";
 
 const skills = [
@@ -51,6 +56,7 @@ const stagger: Variants = {
 
 export default function Home() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const sendRef = useRef<any>(null);
 
     return (
         <main>
@@ -81,47 +87,35 @@ export default function Home() {
                                     href="https://github.com/vinnnnc"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-sm text-muted pb-0.5 border-b border-transparent hover:text-heading hover:border-heading transition-[color,border-color]"
+                                    aria-label="GitHub"
+                                    className="flex items-center justify-center text-muted hover:text-heading transition-[color,border-color]"
                                 >
-                                    GitHub
+                                    <GithubIcon size={18} className="text-current" />
                                 </a>
                                 <a
                                     href="https://www.linkedin.com/in/vtbautista"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-sm text-muted pb-0.5 border-b border-transparent hover:text-heading hover:border-heading transition-[color,border-color]"
+                                    aria-label="LinkedIn"
+                                    className="flex items-center justify-center text-muted hover:text-heading transition-[color,border-color]"
                                 >
-                                    LinkedIn
+                                    <LinkedinIcon size={18} className="text-current" />
                                 </a>
                                 <a
                                     href="mailto:vincentbautista.008@gmail.com"
-                                    className="text-sm text-muted pb-0.5 border-b border-transparent hover:text-heading hover:border-heading transition-[color,border-color]"
+                                    aria-label="Email"
+                                    className="flex items-center justify-center text-muted hover:text-heading transition-[color,border-color]"
                                 >
-                                    Email
+                                    <MailFilledIcon size={18} className="text-current" />
                                 </a>
                                 <a
                                     id="hero-resume-link"
                                     href="/Vincent-Bautista-Resume.pdf"
                                     download
-                                    className="flex items-center gap-1 text-sm text-muted pb-0.5 border-b border-transparent hover:text-heading hover:border-heading transition-[color,border-color]"
+                                    aria-label="Download Resume"
+                                    className="flex items-center justify-center text-muted hover:text-heading transition-[color,border-color]"
                                 >
-                                    Resume
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="12"
-                                        height="12"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        aria-hidden="true"
-                                    >
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                                        <polyline points="7 10 12 15 17 10" />
-                                        <line x1="12" y1="15" x2="12" y2="3" />
-                                    </svg>
+                                    <FileDescriptionIcon size={18} className="text-current" />
                                 </a>
                             </div>
                         </motion.div>
@@ -223,9 +217,12 @@ export default function Home() {
                     </p>
                     <a
                         href="mailto:vincentbautista.008@gmail.com"
-                        className="inline-block text-sm font-medium bg-heading text-page px-6 py-2.5 rounded-md hover:opacity-85 transition-opacity"
+                        className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-medium bg-heading text-page px-6 py-2.5 rounded-md hover:opacity-85 transition-opacity group"
+                        onMouseEnter={() => sendRef.current?.startAnimation?.()}
+                        onMouseLeave={() => sendRef.current?.stopAnimation?.()}
                     >
                         Say Hello
+                        <SendIcon ref={sendRef} size={16} className="text-page shrink-0" />
                     </a>
                 </motion.div>
             </section>
