@@ -15,7 +15,7 @@ Personal portfolio website showcasing my projects, skills, and background as a F
 
 ## Features
 
-- Dark / light theme with localStorage persistence and no flash
+- Dark / light theme
 - Project detail modals with animations
 - Responsive layout
 - Scroll-based navigation highlighting
