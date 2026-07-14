@@ -35,6 +35,7 @@ const skills = [
 const tools = [
     "Arduino IDE",
     "Android Studio",
+    "VS Code",
     "GitHub",
     "Postman",
     "Figma",
@@ -75,7 +76,7 @@ export default function Home() {
                                 Vincent Bautista
                             </h1>
                             <p className="text-[clamp(1rem,2.5vw,1.25rem)] text-muted font-normal mb-6">
-                                Front-End &amp; Embedded Developer
+                                Front-End Developer | Embedded Systems Developer
                             </p>
                             <p className="max-w-115 text-[0.9375rem] text-muted leading-[1.75] mb-8">
                                 I build web interfaces and embedded systems — from IoT dashboards to
@@ -173,10 +174,10 @@ export default function Home() {
                     </h2>
                     <div className="flex flex-col gap-4 mb-10">
                         <p className="text-[0.9375rem] text-muted leading-[1.75]">
-                            I'm a front-end and embedded developer with hands-on experience building web interfaces for
-                            IoT products and industrial monitoring systems. I have a passion for both software and
-                            hardware — Raspberry Pi and microcontrollers, and anything that bridges the physical and
-                            digital world. Currently open to opportunities.
+                            I'm a front-end and embedded systems developer with hands-on experience building web
+                            interfaces for IoT products and industrial monitoring systems. I have a passion for both
+                            software and hardware — Raspberry Pi and microcontrollers, and anything that bridges the
+                            physical and digital world. Currently open to opportunities.
                         </p>
                         <p className="text-[0.9375rem] text-muted leading-[1.75]">
                             Outside of work, I explore game development, 3D modeling, and tinkering with

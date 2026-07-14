@@ -30,7 +30,7 @@
                 background: #fff;
                 max-width: 780px;
                 margin: 0 auto;
-                padding: 52px 52px 48px;
+                /* padding: 52px 52px 48px; */
             }
 
             /* Header */
@@ -51,15 +51,22 @@
                 margin-bottom: 10px;
             }
             .contact-row {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 4px 18px;
+                display: grid;
+                grid-template-columns: auto 1fr auto 1fr;
+                gap: 4px 12px;
                 font-size: 12px;
                 color: #555;
+            }
+            .contact-row .label {
+                font-weight: 600;
+                color: #333;
             }
             .contact-row a {
                 color: #555;
                 text-decoration: none;
+            }
+            .contact-row a:hover {
+                text-decoration: underline;
             }
 
             /* Divider */
@@ -131,46 +138,59 @@
                 line-height: 1.65;
             }
 
-            /* Skills table */
-            .skills-table {
-                width: 100%;
-                border-collapse: collapse;
+            /* Skills grid */
+            .skills-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px 24px;
             }
-            .skills-table tr td {
+            .skills-category {
+                break-inside: avoid;
+            }
+            .skills-category h3 {
                 font-size: 12.5px;
-                padding: 2px 0;
-                vertical-align: top;
+                font-weight: 600;
+                color: #111;
+                margin-bottom: 4px;
             }
-            .skills-table tr td:first-child {
-                font-weight: 700;
-                color: #333;
-                width: 90px;
-                padding-right: 12px;
-            }
-            .skills-table tr td:last-child {
-                font-weight: 400; /* match regular section text weight */
+            .skills-category ul {
+                list-style: none;
+                padding: 0;
+                font-size: 12.5px;
                 color: #444;
+                line-height: 1.6;
+            }
+            .skills-category li {
+                display: inline;
+            }
+            .skills-category li:not(:last-child)::after {
+                content: ", ";
+                margin-right: 4px;
             }
 
             @media print {
                 body {
-                    padding: 18px 28px 18px;
-                    font-size: 12px;
+                    /* padding: 14px 24px 14px; */
+                    font-size: 11.5px;
                     line-height: 1.5;
-                    font-weight: 400; /* tone down perceived weight in PDF viewers */
-                    letter-spacing: -0.01em; /* tighten slightly to compensate rendering */
+                    font-weight: 400;
+                    letter-spacing: -0.01em;
                 }
                 section {
-                    margin-bottom: 12px;
+                    margin-bottom: 10px;
                 }
                 header {
-                    margin-bottom: 12px;
+                    margin-bottom: 10px;
+                }
+                .contact-row {
+                    font-size: 11.5px;
+                    gap: 3px 10px;
                 }
                 hr {
-                    margin: 10px 0;
+                    margin: 8px 0;
                 }
                 .entry {
-                    margin-bottom: 8px;
+                    margin-bottom: 6px;
                 }
                 header h1 {
                     font-size: 22px;
@@ -186,9 +206,19 @@
                 .entry-title {
                     font-weight: 500;
                 }
-                .skills-table tr td {
-                    padding: 1px 0;
-                    font-size: 11.5px;
+                .project-desc {
+                    line-height: 1.5;
+                }
+                .skills-grid {
+                    gap: 8px 16px;
+                }
+                .skills-category h3 {
+                    font-size: 12px;
+                    margin-bottom: 3px;
+                }
+                .skills-category ul {
+                    font-size: 12px;
+                    line-height: 1.5;
                 }
             }
         </style>
@@ -202,14 +232,18 @@
     <body>
         <header>
             <h1>Vincent Bautista</h1>
-            <p class="title">Front-End &amp; Embedded Developer</p>
+            <p class="title">Front-End Developer | Embedded Systems Developer</p>
             <div class="contact-row">
-                <a href="mailto:vincentbautista.008@gmail.com">vincentbautista.008@gmail.com</a>
-                <a href="tel:+639271747951">+63 927 174 7951</a>
-                <a href="https://linkedin.com/in/vtbautista" target="_blank">linkedin.com/in/vtbautista</a>
-                <a href="https://github.com/vinnnnc" target="_blank">github.com/vinnnnc</a>
+                <span class="label">Portfolio</span>
                 <a href="https://vinnnnc.github.io" target="_blank">vinnnnc.github.io</a>
-                <span>Philippines</span>
+                <span class="label">GitHub</span>
+                <a href="https://github.com/vinnnnc" target="_blank">github.com/vinnnnc</a>
+                <span class="label">LinkedIn</span>
+                <a href="https://linkedin.com/in/vinnnnc" target="_blank">linkedin.com/in/vinnnnc</a>
+                <span class="label">Email</span>
+                <a href="mailto:vincentbautista.008@gmail.com">vincentbautista.008@gmail.com</a>
+                <span class="label">Phone</span>
+                <a href="tel:+639271747951">+63 927 174 7951</a>
             </div>
         </header>
 
@@ -219,9 +253,9 @@
         <section>
             <h2>Summary</h2>
             <p style="font-size: 12.5px; color: #444; line-height: 1.7">
-                Front-end and embedded developer with hands-on experience building web interfaces for IoT products and
-                industrial monitoring systems. Passionate about bridging the gap between software and hardware - from
-                React applications to microcontroller firmware.
+                Front-end and embedded systems developer with hands-on experience building web interfaces for IoT
+                products and industrial monitoring systems. Passionate about bridging the gap between software and
+                hardware—from React applications to embedded firmware.
             </p>
         </section>
 
@@ -239,16 +273,15 @@
                 <div class="entry-sub">Katz Water Technologies</div>
                 <ul class="bullets">
                     <li>
-                        Built and maintained web interfaces for the KMonit IoT water monitoring system, including
-                        real-time data dashboards and device monitoring features.
+                        Designed, developed, and maintained web interfaces for the KMonit IoT water monitoring platform,
+                        including real-time dashboards and device monitoring features.
                     </li>
                     <li>Developed the RadiPulse Power marketing and product website from the ground up.</li>
-                    <li>Worked with React, TypeScript, Vite, and Tailwind CSS across all projects.</li>
-                    <li>Collaborated on development of firmware for hardware IoT products.</li>
+                    <li>Built modern web interfaces using React, TypeScript, Vite, and Tailwind CSS</li>
                     <li>
-                        Participated in deployment and maintenance of production websites, including hosting setup and
-                        updates.
+                        Collaborated on firmware development for IoT devices and assisted with hardware integration.
                     </li>
+                    <li>Assisted with website deployment, hosting configuration, and production maintenance.</li>
                 </ul>
             </div>
 
@@ -261,11 +294,11 @@
                 <ul class="bullets">
                     <li>
                         Delivered a full e-commerce storefront (Pangasinan Treasure) using vanilla JavaScript, HTML, and
-                        CSS for the frontend, Express.js for the backend, and MongoDB for the database.
+                        CSS for the front end, Express.js for the backend, and MongoDB for the database.
                     </li>
                     <li>
-                        Built an egg quality inspection system (EggQI) using ESP32 camera and Android App built with MIT
-                        app inventor.
+                        Built an egg quality inspection system (EggQI) using an ESP32-CAM and an Android application
+                        developed with MIT App Inventor.
                     </li>
                 </ul>
             </div>
@@ -283,8 +316,8 @@
                     <span class="entry-meta">Project · 2026</span>
                 </div>
                 <p class="project-desc">
-                    Industrial IoT water tank monitoring platform. microcontroller-based hardware and web + mobile
-                    dashboards for multi-site management.
+                    Industrial IoT water tank monitoring platform with real-time web and mobile dashboards for
+                    multi-site monitoring.
                 </p>
             </div>
 
@@ -294,8 +327,8 @@
                     <span class="entry-meta">Project · 2025</span>
                 </div>
                 <p class="project-desc">
-                    Marketing and product website for a modular LiFePO4 virtual power pack with real-time IoT
-                    monitoring. Built with React, TypeScript, Vite, and Tailwind CSS.
+                    Marketing and product website for a modular energy storage solution with real-time IoT monitoring.
+                    Built with React, TypeScript, Vite, and Tailwind CSS.
                 </p>
             </div>
 
@@ -305,8 +338,8 @@
                     <span class="entry-meta">Thesis · 2024</span>
                 </div>
                 <p class="project-desc">
-                    React Native Android app paired with an ESP-01 smart plug for remote power control and automated
-                    scheduling.
+                    Developed a React Native Android application paired with an ESP-01 smart plug for remote power
+                    control and automated scheduling.
                 </p>
             </div>
         </section>
@@ -331,28 +364,54 @@
         <!-- Skills -->
         <section>
             <h2>Skills</h2>
-            <table class="skills-table">
-                <tr>
-                    <td>Languages</td>
-                    <td>TypeScript, JavaScript, Java, HTML, CSS, C, C++</td>
-                </tr>
-                <tr>
-                    <td>Frontend</td>
-                    <td>React, React Native, Next.js, Tailwind CSS, Vite</td>
-                </tr>
-                <tr>
-                    <td>Backend</td>
-                    <td>Node.js, Express.js, MongoDB</td>
-                </tr>
-                <tr>
-                    <td>Hardware</td>
-                    <td>ESP32, ESP8266, Arduino, Raspberry Pi</td>
-                </tr>
-                <tr>
-                    <td>Tools</td>
-                    <td>Git, Figma</td>
-                </tr>
-            </table>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>TypeScript</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>C/C++</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Next.js</li>
+                        <li>React Native</li>
+                        <li>Tailwind CSS</li>
+                        <li>Vite</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Embedded</h3>
+                    <ul>
+                        <li>ESP32</li>
+                        <li>ESP8266</li>
+                        <li>Arduino</li>
+                        <li>Raspberry Pi</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>VS Code</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </body>
 </html>

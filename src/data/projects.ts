@@ -34,12 +34,12 @@ const projects: Project[] = [
     {
         title: "RadiPulse Power",
         description:
-            "Marketing and product website for the RadiPulse VPP-15 — a modular LiFePO4 virtual power pack with real-time IoT monitoring. A division of Katz Water Technologies.",
+            "Marketing and product website for the RadiPulse modular energy storage solution with real-time IoT monitoring. A division of Katz Water Technologies.",
         tags: ["React", "Tailwind CSS", "TypeScript", "Vite"],
         liveUrl: "https://www.radipulsepower.com/",
         year: "2025",
         longDescription:
-            "A marketing and product website for RadiPulse Power, a division of Katz Water Technologies. The site presents the VPP-15, a modular LiFePO4 virtual power pack designed for off-grid and hybrid energy applications with real-time IoT monitoring capabilities.",
+            "A marketing and product website for RadiPulse Power, a division of Katz Water Technologies. The site presents modular energy storage solution designed for off-grid and hybrid energy applications with real-time IoT monitoring capabilities.",
         highlights: [
             "Clean, conversion-focused marketing layout with product feature sections",
             "Built with React, TypeScript, Vite, and Tailwind CSS",
@@ -50,16 +50,17 @@ const projects: Project[] = [
     {
         title: "KMonit",
         description:
-            "IoT water tank monitoring platform with microcontroller-based hardware and web & mobile dashboards. A division of Katz Water Technologies.",
-        tags: ["IoT", "React", "Mobile", "Vite"],
+            "Industrial IoT water tank monitoring platform with real-time web and mobile dashboards for multi-site monitoring. A division of Katz Water Technologies.",
+        tags: ["IoT", "React", "TypeScript", "Tailwind CSS", "Vite"],
         // liveUrl: "https://kmonit.org/",
         year: "2025",
         longDescription:
-            "KMonit is an industrial IoT water tank monitoring platform developed for Katz Water Technologies. It combines microcontroller-based hardware with cloud infrastructure to provide real-time tank level monitoring, predictive alerts, and multi-site management.",
+            "KMonit is an industrial IoT water tank monitoring platform developed for Katz Water Technologies. It combines embedded systems with cloud infrastructure to provide real-time tank level monitoring, predictive alerts, and multi-site management.",
         highlights: [
-            "Microcontroller-based hardware with real-time water level sensing and alerts",
-            "Supports LoRaWAN, NB-IoT, and LTE connectivity for remote deployments",
-            "Web and mobile dashboards for multi-tank, multi-site management",
+            "Real-time dashboards for industrial water monitoring",
+            "Responsive web and mobile interface",
+            "Multi-site monitoring and device management",
+            "Developed with React, TypeScript, Vite, and Tailwind CSS",
         ],
     },
     // {
